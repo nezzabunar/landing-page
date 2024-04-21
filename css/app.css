@@ -1,0 +1,296 @@
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+h2,
+h3 {
+  color: #9400FF;
+}
+
+header.navbar-container {
+  width: 100%;
+  max-width: 100%;
+  padding-block: 1rem;
+  margin-inline: auto;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  z-index: 999;
+  background-color: #27005D;
+  position: sticky;
+  top: 0;
+}
+
+header.navbar-container .logo img {
+  width: 150px;
+  filter: invert(1);
+}
+
+header.navbar-container .logo img:hover {
+  transition: transform .5s ease;
+}
+
+header.navbar-container .nav-list ul {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+header.navbar-container .nav-list li {
+  list-style: none;
+}
+
+header.navbar-container .nav-list li a {
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.05rem;
+  font-weight: 500;
+  transition: all 0.2 ease-in-out;
+}
+
+header.navbar-container .nav-list li:hover a {
+  background-color: #E4F1FF;
+  color: #27005D;
+}
+
+.hero {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 1rem 3rem;
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.hero .hero-desription {
+  flex: 1 1;
+}
+
+.hero .hero-desription .title {
+  margin-block: 1rem;
+  font-size: 1.5rem;
+  color: #9400FF;
+
+}
+
+.hero .hero-desription p {
+  font-size: 1rem;
+}
+
+.hero .hero-desription button {
+  padding: 0.8rem 2.5rem;
+  border: 3px solid transparent;
+  border-radius: 999px;
+  margin-block-start: 1rem;
+
+  background-color: #9400FF;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.hero .hero-desription button:hover {
+  border: 3px solid #2d3e50;
+  background-color: transparent;
+  color: #2d3e50;
+}
+
+.hero .hero-image {
+  flex: 1;
+
+  display: flex;
+  order: -1;
+}
+
+.hero .hero-image img {
+  width: 300px;
+  min-width: 250px;
+  margin: auto;
+}
+
+.hero-article {
+  margin: 2rem;
+}
+
+
+.cta {
+  position: fixed;
+  inset-block: 0;
+  inset-inline-end: 0;
+}
+
+.social-media {
+  height: 100%;
+  display: flex;
+}
+
+.social-media ul {
+  padding: 1.5rem 1rem;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  margin: auto;
+  background-color: #27005D;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-media li {
+  list-style: none;
+}
+
+.social-media li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+
+  transition: all 0.1s ease-in-out;
+}
+
+.social-media li a:hover {
+  color: #E4F1FF;
+}
+
+footer {
+  padding: 20px;
+  color: white;
+  background-color: #27005D;
+
+  text-align: center;
+  font-weight: bold;
+}
+
+.profile header {
+  text-align: center;
+}
+
+.featured-image {
+  width: 100%;
+  max-height: 300px;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.profile img {
+  max-width: 200px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container {
+  display: flex;
+  padding: 20px;
+  gap: 1.5rem;
+}
+
+#content {
+  flex: 5;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+
+aside {
+  flex: 1;
+}
+
+aside section {
+  text-align: center;
+}
+
+aside section table {
+  display: flex;
+  justify-content: center;
+
+}
+
+header {
+  display: inline;
+}
+
+/* Perangkat dengan lebar layar 1200px dan di bawahnya */
+@media screen and (max-width: 1200px) {
+  section {
+    flex-flow: column nowrap;
+  }
+
+  section aside {
+    align-self: center;
+  }
+}
+
+/* Perangkat dengan lebar layar 768px dan di bawahnya */
+@media screen and (max-width: 768px) {
+  nav ul {
+    justify-content: center;
+  }
+
+  section aside {
+    align-self: stretch;
+  }
+
+  /* Medium devices (768px dan di bawahnya) */
+  @media screen and (max-width: 768px) {
+    header.navbar-container {
+      flex-direction: column;
+    }
+
+    header.navbar-container .nav-list ul {
+      flex-wrap: wrap;
+      column-gap: 0.5rem;
+    }
+
+    section .hero {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    section .hero .hero-desription .title {
+      text-align: center;
+
+    }
+  }
+
+}
