@@ -1,9 +1,13 @@
 // Mengimpor Express
 const express = require('express');
 const path = require('path');
+const cors = require('cors');
 
 // Membuat instance dari Express
 const app = express();
+
+// Mengaktifkan CORS untuk semua domain
+app.use(cors());
 
 // Menentukan port server
 const PORT = process.env.PORT || 3000;
