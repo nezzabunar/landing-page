@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "docker-build": "docker build -t username/landing-page-article:latest .",
-    "docker-run": "docker run -p 3000:3000 username/landing-page-article:latest"
+    "docker-build": "docker build -t nezzabunar/landing-page-articles:1.0.0 .",
+    "docker-run": "docker run -p 3000:3000 nezzabunar/landing-page-articles:1.0.0"
   },
   "author": "Dev",
   "license": "ISC",
